@@ -1,0 +1,33 @@
+Vulnerable-django pausuak:
+
+1- Ingurune birtuala sortu eta karpetan sartu
+	> virtualenv vulnerable-django
+	> cd vulnerable-django
+
+2- Karpetan dagoen aplikazioa osorik kopiatu
+
+3- Ingurune birtuala martxan jarri: 
+	> cd Scripts
+	> activate.bat
+
+4- cd ..
+
+5- betekizunak instalatu
+	> pip install -r requirements.txt
+
+6- Martxan ipini: 
+	> python manage.py runserver
+
+InsecureShop-android pausuak:
+
+1- Android Studio erabili editatzeko eta ejekutatzeko
+
+
+*** Egin behar diren lanak proiektuaren txosten orokorrean eta rubrikan daude azalduta ***
+
+*** Ahultasunei buruz gehiago jakiteko: 
+
+https://shishirsubedi.com.np/thm/unbaked_pie/
+
+https://github.com/optiv/InsecureShop
+eta ahultasunen blog-a, https://docs.insecureshopapp.com/insecureshop-challenges/insecure-data-storage
