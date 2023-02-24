@@ -32,11 +32,31 @@ def signup_view(request):
 
 
 def signup_view(request):
+    error = False
     if request.method == 'POST':
         form = AuthenticationForm(data = request.POST)
         if form.is_valid():
-            if form.get_user() == None:
-                            
+            if form.get_user() == None:     #Comprobar que no e
+                
+                username = form.data['username']    #Devuelve un objeto user
+                password = form.data['password']
+                with connection.cursor() as cursor:
+                    sql = "INSERT INTO proyectos_usuario(username, password) VALUES(%s, %s)"
+                    cursor.execute(sql, [username, password])
+                usuario= AuthenticationForm(data = request.POST).get_user()
+                login(request, usuario)         #Se que no esta optimizau xd 
+                return redirect('articles:home')
+            else:
+                error = True
+        else:
+            error = True
+    else:
+        form = UserCreationForm()
+    form = UserCreationForm()
+    context = {
+        'form': form,
+        'error': error,
+    }
     return render(request, 'account/signup.html', context)
 
 """
