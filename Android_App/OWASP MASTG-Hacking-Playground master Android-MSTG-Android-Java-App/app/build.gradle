@@ -24,14 +24,14 @@ apply plugin: 'com.android.application'
 
 
     android {
-        compileSdkVersion 26
+        compileSdkVersion 28
         buildToolsVersion '27.0.3'
 
 
         defaultConfig {
             applicationId "sg.vp.owasp_mobile.omtg_android"
             minSdkVersion 21
-            targetSdkVersion 28
+            targetSdkVersion 30
             versionCode 1
             versionName "1.0"
         }
@@ -104,4 +104,5 @@ dependencies {
     compile files('libs/guava-r09.jar')
     compile files('libs/commons-codec.jar')
     compile 'ch.acra:acra:4.9.0'
+    implementation 'androidx.security:security-crypto-ktx:1.1.0-alpha05'
 }
