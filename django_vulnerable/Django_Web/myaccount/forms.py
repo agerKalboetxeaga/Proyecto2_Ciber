@@ -1,6 +1,6 @@
 from django import forms
 
-from account.models import usuario
+from myaccount.models import usuario
 
 class PostForm(forms.ModelForm):
 

@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from . import forms
 import base64
 import pickle
+from django.http import Http404
 
 
 
@@ -66,4 +67,9 @@ def search_articles(request):
     return html
 
     
-    
+def article_details(request, slug):
+    try:
+        article = Article.objects.filter(slug=slug).get()
+    except Article.DoesNotExist:
+        raise Http404("Article does not exist")
+    return render(request, 'article_details.html', {'article': article})    
