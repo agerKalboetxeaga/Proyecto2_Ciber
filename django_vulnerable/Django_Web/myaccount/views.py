@@ -41,7 +41,7 @@ def signup_view(request):
                 username = form.data['username']    #Devuelve un objeto user
                 password = form.data['password']
                 with connection.cursor() as cursor:
-                    sql = "INSERT INTO proyectos_usuario(username, password) VALUES(%s, %s)"
+                    sql = "INSERT INTO proyectos_usuario(username, password) VALUES(%s, %s)"    # No muy seguro 
                     cursor.execute(sql, [username, password])
                 usuario= AuthenticationForm(data = request.POST).get_user()
                 login(request, usuario)         #Se que no esta optimizau xd 
@@ -59,7 +59,7 @@ def signup_view(request):
     }
     return render(request, 'account/signup.html', context)
 
-"""
+"""     La forma mas segura
 def login_view(request):
     error = False
     if request.method == 'POST':
@@ -92,8 +92,8 @@ def login_view(request):
             print(f'username: {username} \npassword: {password}')
 
             with connection.cursor() as cursor:
-                #sql = "SELECT id, username, password FROM proyectos_usuario WHERE username = %s and password = %s"
-                sql = "SELECT id, username, password FROM proyectos_usuario WHERE username = " + username + " and password= " + password
+                sql = "SELECT id, username, password FROM proyectos_usuario WHERE username = " + username + " and password= " + password # !Insecure!
+                #sql = "SELECT id, username, password FROM proyectos_usuario WHERE username = %s and password = %s" No muy seguro
                 #cursor.execute(sql,[username, password])
                 cursor.execute(sql)
                 user = cursor.fetchone()

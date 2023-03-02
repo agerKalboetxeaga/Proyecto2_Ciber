@@ -92,7 +92,7 @@ DATABASES = {
 }
 
 # Id del sitio (Django-k automatikoki sortutako site-a)
-SITE_ID = 1
+SITE_ID = 2
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
