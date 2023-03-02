@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://i.imgur.com/VeEYEkT.png" alt="Hacker roadmap" /><br>
+    <img src="https://imgs.search.brave.com/f2GIz7F2E8MuFYWMNaUXRWuljZ86eIA03L83oLSXFPI/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9I/ZUpHYWZuNnE3QS9t/YXhyZXNkZWZhdWx0/LmpwZw" alt="Hacker roadmap" /><br>
 </p>
 
 Repositorio hau Ciber ikasturteko T3 Zabala Gailetena da
@@ -43,7 +43,7 @@ Baina *"CreateObject"* funtzioak ez zituen OLE fitxategiak pasatzen zituen datua
     <img src="https://github.com/agerKalboetxeaga/Proyecto2_Ciber/blob/main/Hacking/Capturas/kaliSetup(1).PNG?raw=true">
 </p>
 
-Hasteko malwarea duen web horri bat prestatu (index izenarekin) eta pythonen **http.server** modulua erabilita *80* portuan zerbitzari bat sortu dugu. Web horrian reverse shell portaera bat sartu diogu kalira begira; beraz kalian **nc -lvp 6969** eginda *[netcat](https://eternallybored.org/misc/netcat/)* konexioak entzuten geldituko da eta horrela dena prest izango genuke.
+Hasteko malwarea duen web horri bat prestatu (index izenarekin) eta pythonen **http.server** modulua erabilita ***``80``*** portuan zerbitzari bat sortu dugu. Web horrian reverse shell portaera bat sartu diogu kalira begira; beraz kalian ``nc -lvp 6969`` eginda *[netcat](https://eternallybored.org/misc/netcat/)* konexioak entzuten geldituko da eta horrela dena prest izango genuke.
 
 ### 2) Biktimaren POV-a 
 <p align="center">
