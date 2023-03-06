@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://imgs.search.brave.com/f2GIz7F2E8MuFYWMNaUXRWuljZ86eIA03L83oLSXFPI/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9I/ZUpHYWZuNnE3QS9t/YXhyZXNkZWZhdWx0/LmpwZw" alt="Hacker roadmap" /><br>
+    <img src="https://github.com/agerKalboetxeaga/Proyecto2_Ciber/blob/main/Docs/Chema_Alonso%20(1).jpg" alt="Hacker roadmap" /><br>
 </p>
 
 Repositorio hau Ciber ikasturteko T3 Zabala Gailetena da
