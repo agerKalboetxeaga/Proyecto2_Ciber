@@ -39,13 +39,6 @@ public class OMTG_DATAST_001_SharedPreferences extends AppCompatActivity {
         catch(Exception e) {
             Toast.makeText(this, "Exception " + e.getMessage() + " occured", Toast.LENGTH_LONG).show();
         }
-
-        //SharedPreferences sharedPref = getSharedPreferences("key", MODE_PRIVATE);
-        //SharedPreferences.Editor editor = sharedPref.edit();
-        //editor.putString("username", "administrator");
-        //editor.putString("password", "supersecret");
-        //editor.commit();
-
     }
 
 
@@ -71,16 +64,17 @@ public class OMTG_DATAST_001_SharedPreferences extends AppCompatActivity {
     @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.M)
     public void enkriptatu() {
         try {
-            SharedPreferences sharedPreferences = EncryptedSharedPreferences.create(this, "key",
+            SharedPreferences sharedPreferences = EncryptedSharedPreferences.create(this, "sharedPreferences_Proiektua",
                     masterKey,
                     EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
                     EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
             );
             // storing a value
-            sharedPreferences.edit().putString("username", "izaskun").putString("password", "password").apply();
+            sharedPreferences.edit().putString("username", "proiektu1").putString("password", "Admin123").apply();
+
             // reading a value
-            TextView helloTextView = (TextView) findViewById(R.id.title);
-            helloTextView.setText(sharedPreferences.getString("username",""));
+            Toast.makeText(this, sharedPreferences.getString("username",""), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, sharedPreferences.getString("password",""), Toast.LENGTH_SHORT).show();
         }
         catch(Exception e) {
             Toast.makeText(this, "Exception " + e.getMessage() + " occured", Toast.LENGTH_LONG).show();

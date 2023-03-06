@@ -1,26 +1,60 @@
 package sg.vp.owasp_mobile.OMTG_Android;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 public class MyActivity extends AppCompatActivity {
 
+    private Toast toast;
+    private static String[] PERMISOS = {
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.READ_SMS,
+            Manifest.permission.SEND_SMS
+    };
+    private final static int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        permisos();
+    }
+
+    private void permisos(){
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if(permissionCheck!= PackageManager.PERMISSION_GRANTED){ //No tiene el permiso
+            if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
+                ActivityCompat.requestPermissions(this, PERMISOS, MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults){
+        String mensaje = "";
+        if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            mensaje = "Permiso Concedido";
+        }
+        else{
+            mensaje = "Permiso no concedido";
+        }
+        toast = Toast.makeText(this, mensaje, Toast.LENGTH_LONG);
+        toast.show();
     }
 
     @Override
