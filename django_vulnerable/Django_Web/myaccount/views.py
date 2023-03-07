@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from django.db import connection
 
 # Create your views here.
-"""
+
 def signup_view(request):
     error = False
     if request.method == 'POST':
@@ -27,10 +27,10 @@ def signup_view(request):
     }
     return render(request, 'account/signup.html', context)
 
+
+
+
 """
-
-
-
 def signup_view(request):
     error = False
     if request.method == 'POST':
@@ -58,8 +58,8 @@ def signup_view(request):
         'error': error,
     }
     return render(request, 'account/signup.html', context)
-
-"""     La forma mas segura
+"""
+    
 def login_view(request):
     error = False
     if request.method == 'POST':
@@ -105,7 +105,7 @@ def login_view(request):
 
     else:
         return JsonResponse({"status": "error", "message": "Invalid request method"}, status=405)
-
+"""
 
 def logout_view(request):
     if request.method == 'POST':
