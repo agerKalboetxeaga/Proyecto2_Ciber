@@ -61,7 +61,7 @@ Biktima web horrian sartu eta orain nire ordenagailu erasotzailearekin konektatu
 
 ### 4) Post esplotazio kutrea
 <p align="center">
-    <img src="https://github.com/agerKalboetxeaga/Proyecto2_Ciber/blob/main/Hacking/Capturas/pwned(3).PNG">
+    <img src="https://github.com/agerKalboetxeaga/Proyecto2_Ciber/blob/main/Hacking/Capturas/hacked%20txt(4).PNG">
 </p>
 Orain biktimaren kontrol osoa dugu eta adibidez fitxategi bat sortu eta notepadekin zabaldu dezakegu honek biktimaren ordenagailuan notepada zabalduko du eta biktima oso kagatuta egongo da.
 
