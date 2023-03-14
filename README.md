@@ -12,23 +12,13 @@ Repositorio hau Ciber ikasturteko T3 Zabala Gailetena da
 
 # Table of Contents
 
-- [Ekoizpen gertakariak](#ekoizpen-gertakariak)
-    - [Django Web](#django-web)
-    - [Android App](#android-app)
+- [Ekoizpen gertakariak](#)
+    - [Django Web](https://github.com/agerKalboetxeaga/Proyecto2_Ciber/tree/main/django_vulnerable/Django_Web)
+    - [Android App](https://github.com/agerKalboetxeaga/Proyecto2_Ciber/tree/main/Android_App/OWASP%20MASTG-Hacking-Playground%20master%20Android-MSTG-Android-Java-App)
+- [Phishing](https://github.com/agerKalboetxeaga/Proyecto2_Ciber/tree/main/Phishing)
 - [Hacking](#hacking)
-- [Docs](#Docs)
+- [Docs](https://github.com/agerKalboetxeaga/Proyecto2_Ciber/tree/main/Docs)
 - [License](#license)
-
-
-# Ekoizpen gertakariak
-
-## Django Web
-**Capturas** escribir tocho con capturas: [Wikipedia](https://en.wikipedia.org/wiki/Operations_security)
-
-## Android App
-**capturas** mas tocho
-
-([Table of Contents](#table-of-contents))
 
 # Hacking
 
